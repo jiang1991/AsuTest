@@ -1,30 +1,31 @@
 package com.example.asutest.one;
 
-import junit.framework.TestCase;
-
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class OctTest extends TestCase {
+public class OctTest {
 
-    private Oct oct;
     private int[] list;
 
     @Before
     public void setUp() throws Exception {
-        super.setUp();
-        oct = new Oct();
         list = new int[]{-10, 100, 23, 6, 52, 10000};
     }
 
+    @Test
     public void testBinarySearch1() {
-        assertTrue(oct.binarySearch(list, -10));
+        Assert.assertTrue(Oct.binarySearch(list, -10));
     }
 
+    @Test
     public void testBinarySearch2() {
-        assertTrue(oct.binarySearch(list, 10000));
+        Assert.assertTrue(Oct.binarySearch(list, 10000));
     }
 
-    public void testBinarySearch3() { assertFalse(oct.binarySearch(list, 5));
+    @Test
+    public void testBinarySearch3() {
+        Assert.assertFalse(Oct.binarySearch(list, 5));
     }
+
 }
