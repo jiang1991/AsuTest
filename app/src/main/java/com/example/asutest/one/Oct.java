@@ -20,11 +20,11 @@ public class Oct {
     public static boolean binarySearch(int[] input, int number) {
 
         // useless var
-        String s = "i am useless string";
+//        String s = "i am useless string";
 
         // assign a var but never call it
-        int i = 10;
-        i++;
+//        int i = 10;
+//        i++;
 
         Arrays.sort(input);
 
